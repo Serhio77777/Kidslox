@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="compiled/styles.css" rel="stylesheet"></link>
+      <script src="node_modules/angular/angular.js"></script>
+      <script src="node_modules/ngstorage/ngStorage.min.js"></script>
+      <script src="compiled/app.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="NewCtrl" onload="compiled/app.js">
+      <div class="wrapper">
+          <div class="body">
+              <div class="page_title">
+                  <div class="title">Kidslox</div>
+                  <div class="help"></div>
+              </div>
+              <div class="div"></div>
+              <form>
+                  <div class="wrapper_expression">
+                      <div class="expression"><div><p>{{expression.a}} {{expression.sing}} {{expression.b}} </p></div></div>
+                      <div class="sing" textholder=" = "><div><p>=</p></div></div>
+                      <div class="answer" textholder=" = "><div><p> {{answer}} </p></div></div>
+                  </div>
+                  <div class="line_row">
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(1)">
+                                <div>
+                                    <br>
+                                    <p><b class="number">1</b><br></p>
+                                </div>
+                          </div>
+                      </div>
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(2)">
+                              <div>
+                                  <p><b class="number">2</b><br>ABC</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(3)">
+                              <div>
+                                  <p><b class="number">3</b><br>DEF</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="line_row">
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(4)">
+                              <div>
+                                  <p><b class="number">4</b><br>GHI</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(5)">
+                              <div>
+                                  <p><b class="number">5</b><br>JKL</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(6)">
+                              <div>
+                                  <p><b class="number">6</b><br>MNO</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="line_row">
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(7)">
+                              <div>
+                                  <p><b class="number">7</b><br>PQRS</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(8)">
+                              <div>
+                                  <p><b class="number">8</b><br>TUV</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(9)">
+                              <div>
+                                  <p><b class="number">9</b><br>WXYZ</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="line_row">
+                      <div class="button">
+                          <div class="button-inner" ng-click="back()">
+                              <div>
+                                  <br>
+                                  <p><b class="number">back</b></p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="button">
+                          <div class="button-inner" ng-click="addElement(0)">
+                              <div>
+                                  <p><b class="number">0</b><br>+</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="button">
+                          <div class="button-inner" ng-click="submit()">
+                              <div>
+                                  <br>
+                                  <p><b class="number">submit</b></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              <form>
+          </div>
+      </div>
+  </body>
+</html>
