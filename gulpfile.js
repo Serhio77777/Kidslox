@@ -18,9 +18,9 @@ gulp.task('scripts', function () {
   var es6transpiler = require('gulp-es6-transpiler'),
       uglify = require('gulp-uglify'),
       ngAnnotate = require('gulp-ng-annotate');
-  return gulp.src('./scripts/*.js')
+  return gulp.src('./scripts/**/*.js')
     .pipe(sourcemaps.init())
-    // .pipe(es6transpiler())
+    //.pipe(es6transpiler())
     .pipe(concat('app.js'))
     .pipe(ngAnnotate())
     .pipe(uglify())
@@ -30,5 +30,5 @@ gulp.task('scripts', function () {
 
 gulp.task('watch', function () {
   gulp.watch('./styles/*.scss', ['scss']);
-  gulp.watch('./scripts/*.js', ['scripts']);
+  gulp.watch('./scripts/**/*.js', ['scripts']);
 });
