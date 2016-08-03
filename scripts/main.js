@@ -12,6 +12,7 @@ angular.module('myApp', [])
             if (location.inspection($scope.answer)) {
               alert('Success');
               $scope.expression = location.getElements();
+              $scope.answer = " ";
             } else {
                 alert('Wrong');
             }
