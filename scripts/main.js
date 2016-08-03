@@ -3,13 +3,18 @@ angular.module('myApp', [])
         $scope.expression = location.getElements();
         $scope.answer = " ";
         $scope.addElement = function (number) {
-          $scope.answer += location.AddElement(number);
+            $scope.answer += location.AddElement(number);
         };
         $scope.back = function () {
-          $scope.answer = location.deleteAnswer($scope.answer);
+            $scope.answer = location.deleteAnswer($scope.answer);
         };
         $scope.submit = function () {
-          alert(location.inspection($scope.answer) ? 'Success' : 'Wrong');
+            if (location.inspection($scope.answer)) {
+              alert('Success');
+              $scope.expression = location.getElements();
+            } else {
+                alert('Wrong');
+            }
         };
 })
 .service('location', function() {
