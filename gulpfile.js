@@ -17,13 +17,16 @@ gulp.task('scss', function () {
 gulp.task('scripts', function () {
   var es6transpiler = require('gulp-es6-transpiler'),
       uglify = require('gulp-uglify'),
-      ngAnnotate = require('gulp-ng-annotate');
+      ngAnnotate = require('gulp-ng-annotate'),
+      plumber = require('gulp-plumber');
   return gulp.src('./scripts/**/*.js')
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     //.pipe(es6transpiler())
     .pipe(concat('app.js'))
     .pipe(ngAnnotate())
     .pipe(uglify())
+    .pipe(plumber.stop())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./compiled'));
 });
